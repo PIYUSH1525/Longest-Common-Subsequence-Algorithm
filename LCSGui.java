@@ -67,21 +67,17 @@ public class LCSGui extends JFrame {
         int[][] table1 = new int[str1.length() + 1][str2.length() + 1];
         int[][] table2 = new int[str1.length() + 1][str2.length() + 1];
 
-        // Call the LCS algorithm function and populate table1 and table2
         int length = computeLCS(str1, str2, table1, table2);
 
         // Display tables in JTextAreas
         displayTable(table1Area, table1);
         displayTable(table2Area, table2);
 
-        // Construct and display the LCS result
         String lcs = constructLCS(str1, table2);
         resultArea.setText("Length of LCS: " + length + "\nLongest Common Subsequence: " + lcs);
     }
 
     private int computeLCS(String str1, String str2, int[][] table1, int[][] table2) {
-        // Implement your LCS algorithm using dynamic programming here
-        // Populate table1 and table2
         int m = str1.length();
         int n = str2.length();
 
